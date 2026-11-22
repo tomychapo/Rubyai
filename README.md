@@ -4,7 +4,7 @@ Ruby uses the browser microphone and speech synthesis for voice, and a Cloudflar
 
 ## Deploy to Cloudflare
 
-Run these from the repository root using current Wrangler 4 and an authenticated Cloudflare account. Use the name of your existing Ruby Worker with `--name YOUR_WORKER_NAME` on each deployment and secret command if it differs from `ruby`. Review the existing Worker's settings before replacing its deployment.
+Run these from the repository root using current Wrangler 4 and an authenticated Cloudflare account. The repository targets the existing `rubyaibrain` Worker. Review the existing Worker's settings before replacing its deployment.
 
 1. Run `npx wrangler@4 deploy`. The chat API fails closed until both secrets are present.
 2. If that Worker does not already have the `GEMINI` secret, run `npx wrangler@4 secret put GEMINI` and paste the Gemini API key at the prompt.
