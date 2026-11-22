@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#241336">
+  <title>Ruby 2.0</title>
+  <link rel="stylesheet" href="ruby.css">
+  <script defer src="ruby.js"></script>
+</head>
+<body>
+  <main>
+    <header><h1>Ruby 2.0</h1><label><input id="speak" type="checkbox" checked> Speak replies</label></header>
+    <section id="chat" aria-label="Conversation" role="log"></section>
+    <p id="status" role="status"></p>
+    <form id="composer">
+      <button id="mic" type="button" aria-label="Start microphone" aria-pressed="false">🎙️</button>
+      <input id="message" aria-label="Message" placeholder="Talk to Ruby…" maxlength="2000" autocomplete="off">
+      <button id="send">Send</button>
+    </form>
+    <details id="settings">
+      <summary>Settings</summary>
+      <label>Ruby access code <input id="code" type="password" maxlength="240" autocomplete="off"></label>
+      <label>Voice <select id="voice"><option value="">Australian English preferred</option></select></label>
+      <button id="replay" type="button">Replay last reply</button>
+      <p>Chat history stays in this browser. Your message and up to 12 recent chat entries go to Google Gemini for a reply.</p>
+    </details>
+  </main>
+</body>
+</html>
