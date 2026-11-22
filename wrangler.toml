@@ -1,0 +1,15 @@
+name = "rubyaibrain"
+main = "worker.mjs"
+compatibility_date = "2026-11-21"
+preview_urls = false
+keep_vars = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[[ratelimits]]
+name = "CHAT_LIMIT"
+namespace_id = "1001"
+simple = { limit = 10, period = 60 }
